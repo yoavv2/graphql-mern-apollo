@@ -13,25 +13,31 @@ function PostCard({
     console.log(`comment on post!`);
   }
   return (
-    <Card fluid>
+    <Card className="card-body" fluid>
       <Card.Content>
         <Image
           floated="right"
           size="mini"
           src="https://react.semantic-ui.com/images/avatar/large/molly.png"
         />
-        <Card.Header>{username}</Card.Header>
-        <Card.Meta as={Link} to={`/posts/${id}`}>
+        <Card.Header className="card-username">{username}</Card.Header>
+        <Card.Meta className="card-date" as={Link} to={`/posts/${id}`}>
           {moment(createdAt).fromNow(true)}
         </Card.Meta>
-        <Card.Description>{body}</Card.Description>
+        <Card.Description className="card-description">{body}</Card.Description>
       </Card.Content>
       <Card.Content extra>
         <Button as="div" labelPosition="right" onClick={likePost}>
           <Button color="teal" basic>
             <Icon name="heart" />
           </Button>
-          <Label as="a" basic color="teal" pointing="left">
+          <Label
+            className="card-label"
+            as="a"
+            basic
+            color="teal"
+            pointing="left"
+          >
             {likeCount}
           </Label>
         </Button>

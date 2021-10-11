@@ -1,5 +1,13 @@
+:root {
+  /* --blue: rgb(26, 57, 87); */
+  /* --blue: rgb(21, 32, 43); */
+  --blue: #011627;
+  --white: rgb(255, 255, 255);
+}
+
 .page-title {
   display: block !important;
+  color: var(--text-color) !important;
   text-align: center;
   font-size: 2rem;
   margin-top: 10px;
@@ -7,4 +15,33 @@
 .form-container {
   width: 400px;
   margin: auto;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: var(--background-color) !important;
+  color: var(--text-color) !important;
+  font-weight: var(--font-weight) !important;
+  transition: background 0.3s ease-in-out, color 0.6s ease-in-out !important;
+}
+.card-body {
+  background: var(--background-color) !important;
+}
+
+.menu-item,
+.card-username,
+.card-description,
+.card-date {
+  color: var(--text-color) !important;
+}
+
+body.light {
+  --background-color: var(--white);
+  --text-color: var(--blue);
+  --font-weight: 400;
+}
+body.dark {
+  --background-color: var(--blue);
+  --text-color: var(--white);
+  --font-weight: 500;
 }

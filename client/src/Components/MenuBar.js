@@ -18,12 +18,13 @@ function MenuBar() {
       <Menu.Item name={user.username} active as={Link} to="/" />
 
       <Menu.Menu position="right">
-        <Menu.Item name="logout" onClick={logout} />
+        <Menu.Item className="menu-item" name="logout" onClick={logout} />
       </Menu.Menu>
     </Menu>
   ) : (
     <Menu pointing secondary size="massive" color="teal">
       <Menu.Item
+        className="menu-item"
         name="home"
         active={activeItem === "home"}
         onClick={handleItemClick}
@@ -33,6 +34,7 @@ function MenuBar() {
 
       <Menu.Menu position="right">
         <Menu.Item
+          className="menu-item"
           name="login"
           active={activeItem === "login"}
           onClick={handleItemClick}
@@ -40,6 +42,7 @@ function MenuBar() {
           to="/login"
         />
         <Menu.Item
+          className="menu-item"
           name="register"
           active={activeItem === "register"}
           onClick={handleItemClick}

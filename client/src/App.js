@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
@@ -10,12 +11,14 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import MenuBar from "./Components/MenuBar";
 import AuthRoute from "./util/AuthRoute";
+import DarkMode from "./Components/DarkMode/DarkMode";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Container>
+          <DarkMode />
           <MenuBar />
           <Route exact path="/" component={Home} />
           <AuthRoute exact path="/login" component={Login} />
